@@ -9,7 +9,7 @@ var destroy_timer = 0.0
 
 func collect(body):
 	if !collected && body == character && character.controllable:
-		kill()
+		character.kill()
 		sound.play()
 		collected = true;
 		animation = "collect"

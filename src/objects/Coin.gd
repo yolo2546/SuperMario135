@@ -11,7 +11,6 @@ func collect(body):
 	if !collected && body == character && character.controllable:
 		onready var mode_switcher = get_node("../../../ModeSwitcher")
 		mode_switcher.switch_to_editing()
-		mode_switcher.switch_to_testing()
 		sound.play()
 		collected = true;
 		animation = "collect"

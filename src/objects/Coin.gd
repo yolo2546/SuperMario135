@@ -9,8 +9,9 @@ var destroy_timer = 0.0
 
 func collect(body):
 	if !collected && body == character && character.controllable:
-		extends GameObject
-		character.position = position
+		reset_vars()
+		var global_vars = get_node("../GlobalVars")
+		global_vars.reload()
 		sound.play()
 		collected = true;
 		animation = "collect"

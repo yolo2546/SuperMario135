@@ -9,8 +9,8 @@ var destroy_timer = 0.0
 
 func collect(body):
 	if !collected && body == character && character.controllable:
-		onready var mode_switcher = get_node("../../../ModeSwitcher")
-		mode_switcher.switch_to_editing()
+		extends GameObject
+		character.position = position
 		sound.play()
 		collected = true;
 		animation = "collect"
